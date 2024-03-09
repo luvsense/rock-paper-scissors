@@ -1,8 +1,8 @@
 function getComputerChoice() {
-  // Randomly returns either Rock, Paper, Scissor.
+  // Randomly returns either Rock, Paper or Scissor.
   const choices = ["rock", "paper", "scissor"];
-  const chance = Math.floor(Math.random() * choices.length);
-  return choices[chance];
+  const randomIndex = Math.floor(Math.random() * choices.length);
+  return choices[randomIndex];
 }
 
 function playRound(computerSelection, playerSelection) {
@@ -20,12 +20,17 @@ function playRound(computerSelection, playerSelection) {
   }
 }
 
+// Prompts user for an Input and converts it to lowercase
 const playerSelection = prompt(
   `Choose: rock, paper, scissor`,
   ""
 ).toLowerCase();
 
+// Holds computer selection value returned by fucntion in a constant.
 const computerSelection = getComputerChoice();
+
 console.log(`Computer Played: ${computerSelection}`);
 console.log(`Played Played: ${playerSelection}`);
+
+// Executes one round of game.
 playRound(computerSelection, playerSelection);
