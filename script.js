@@ -30,7 +30,7 @@ const playerSelection = prompt(
 const computerSelection = getComputerChoice();
 
 console.log(`Computer Played: ${computerSelection}`);
-console.log(`Played Played: ${playerSelection}`);
+console.log(`Player Played: ${playerSelection}`);
 
 // Executes one round of game.
 playRound(computerSelection, playerSelection);
