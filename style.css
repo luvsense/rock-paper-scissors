@@ -1,4 +1,42 @@
+html {
+  background-color: white;
+  /* overflow: hidden; */
+}
+
 body {
-  background-color: grey;
-  color: aliceblue;
+  font-family: roboto;
+}
+
+h1 {
+  text-align: center;
+}
+.displayStats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.gameBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.images {
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+img {
+  height: 200px;
+  width: auto;
+}
+.playbtn {
+  transition: transform 0.2s ease-in-out; /* Add a smooth transition effect */
+}
+.playbtn:hover {
+  transform: scale(1.1);
+  rotate: -1deg; /* Scale up the image on hover */
+  cursor: pointer;
 }

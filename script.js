@@ -4,6 +4,7 @@ const scissorBtn = document.querySelector('.scissorbtn');
 const result = document.querySelector('.result');
 const playBtn = document.querySelectorAll('.playbtn');
 const displayRounds = document.querySelector('.displayRounds');
+const displayScores = document.querySelector('.displayScores');
 const resetGame = document.querySelector('.resetGame');
 let playerScore = 0;
 let computerScore = 0;
@@ -13,12 +14,14 @@ playGame = true;
 function disableButtons() {
   for (let btn of playBtn) {
     btn.disabled = true;
+    resetGame.className = 'button is-danger is-fullwidth resetGame';
   }
 }
 
 function checkGameStaus() {
   if (totalRounds >= 5) {
     playGame = false;
+
     disableButtons();
   }
 }
@@ -73,6 +76,7 @@ function playRound(playerSelection) {
     playerScore += 1;
   }
   totalRounds++;
+  displayScores.innerHTML = `<p> Player: ${playerScore} </p> <p>Computer: ${computerScore}</p>`;
   displayRounds.textContent = `Round : ${totalRounds}`;
   checkGameStaus();
 }
@@ -86,4 +90,7 @@ resetGame.addEventListener('click', function () {
     btn.disabled = false;
   }
   displayRounds.textContent = `Round : ${totalRounds}`;
+  displayScores.innerHTML = `<p> Player: ${playerScore} </p> <p>Computer: ${computerScore}</p>`;
+  result.textContent = '';
+  resetGame.className = 'button is-info is-fullwidth resetGame';
 });
