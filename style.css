@@ -1,42 +1,80 @@
-html {
-  background-color: #ededed;
-  /* overflow: hidden; */
-}
-
 body {
-  font-family: roboto;
+  background-image: url('img/gold-background.jpg');
+  background-size: 100%;
+  background-color: #fff;
+  color: #d1b796;
+  font-family: "Henny Penny", system-ui;
 }
 
-h1 {
+.title {
   text-align: center;
-}
-.displayStats {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
+  margin-top: 150px;
+  font-size: 28px;
 }
 
-.gameBtn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.content {}
+
+p {
+  font-size: 22px;
 }
 
 .images {
-  display: block;
-  align-items: center;
+  display: flex;
   justify-content: center;
 }
+
 img {
-  height: 200px;
+  height: 100px;
   width: auto;
 }
-.playbtn {
-  transition: transform 0.2s ease-in-out; /* Add a smooth transition effect */
+
+.stats {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
 }
+
+.displayScores {
+  margin: 10px;
+  display: flex;
+  /* flex-wrap: nowrap; */
+  justify-content: center;
+  flex-direction: row;
+}
+
+.displayScores p {
+  margin: 10px;
+}
+
+.result {
+  text-align: center;
+}
+
+.resetGame {
+  min-width: 100px;
+  margin-left: 665px;
+  margin-top: 20px;
+  padding: 5px;
+  background: #d1b796;
+  border: 0;
+  border-radius: 8px;
+  color: #212121;
+  cursor: pointer;
+  font-family: "Cascadia Code", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-size: 1rem;
+  transition: .2s;
+}
+
+.playbtn {
+  transition: transform 0.2s ease-in-out;
+  /* Add a smooth transition effect */
+}
+
 .playbtn:hover {
   transform: scale(1.1);
-  rotate: -1deg; /* Scale up the image on hover */
+  /* Scale up the image on hover */
   cursor: pointer;
 }
